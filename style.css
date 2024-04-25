@@ -107,3 +107,71 @@ h1{
     animation-delay: 1s;
     width: 25px;
 }
+h2{
+    color: aliceblue;
+    font-family: 'Averia Libre';
+    font-size: 30px;
+}
+.icon{
+    color: #fbfcfd;
+}
+/* Styles for the contact form */
+.contact-form {
+    position: fixed;
+    transform: translate(0, 50%);
+  top: 0;
+  right: -100%; /* Initially hidden to the right */
+  background-color: transparent; /* Transparent background */
+  width: 80%; /* Adjust width as needed */
+  max-width: 400px; /* Maximum width for larger screens */
+  padding: 2px; /* Add padding for better appearance */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Drop shadow */
+  transition: right 0.5s ease; /* Dropdown transition */
+  z-index: 999;
+    display:none;
+  }
+  
+  /* Show the form when the show-form class is added */
+  .contact-form.show-form {
+    right: calc((100vw - 400px) / 2); /* Center the form horizontally */
+  }
+  
+  .input-box {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .input-box input {
+    width: calc(100% - 40px); /* Adjust input width */
+    padding: 15px; /* Adjust input padding */
+    font-size: 20px; /* Adjust input font size */
+    border: none; /* Remove border */
+    border-bottom: 1px solid #000; /* Add bottom border */
+    background-color: transparent; /* Set background color to transparent */
+    padding-left: 30px; /* Adjust left padding to make space for the icon */
+  }
+  
+  .input-box .icon {
+    position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5px; /* Adjust icon position */
+  font-size: 20px;
+  }
+  .input-box input::placeholder {
+    color: #000; /* Set placeholder color to black */
+    font-size: 15px;
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .contact-form {
+      width: 90%; /* Adjust width for smaller screens */
+      max-width: 300px; /* Maximum width for smaller screens */
+      top: 50%; /* Center vertically */
+      right: 50%;
+      transform: translate(50%, -50%);
+    }
+  }
+  
